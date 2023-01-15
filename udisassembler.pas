@@ -86,7 +86,7 @@ begin
     OP_SCOPE_EXIT,
     OP_CALL:
       Result := DisassembleWord(CO, Opcode, OffSet);
-    OP_GET_CELL, OP_SET_CELL, OP_LOAD_CELL:
+    OP_GET_CELL, OP_SET_CELL, OP_SET_CELL_PARAM, OP_LOAD_CELL:
       Result := DisassembleCell(CO, Opcode, OffSet);
     OP_MAKE_FUNCTION:
       Result := DisassembleMakeFunction(CO, Opcode, OffSet);

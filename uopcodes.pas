@@ -33,9 +33,10 @@ const
 
   OP_GET_CELL = 17;
   OP_SET_CELL = 18;
-  OP_LOAD_CELL = 19;
+  OP_SET_CELL_PARAM = 19;
+  OP_LOAD_CELL = 20;
 
-  OP_MAKE_FUNCTION = 20;
+  OP_MAKE_FUNCTION = 21;
 
 function OpcodeToString(const Opcode: Byte): String;
 
@@ -63,6 +64,7 @@ begin
     OP_RETURN        : Result := 'RETURN';
     OP_GET_CELL      : Result := 'GET_CELL';
     OP_SET_CELL      : Result := 'SET_CELL';
+    OP_SET_CELL_PARAM: Result := 'SET_CELL_PARAM';
     OP_LOAD_CELL     : Result := 'LOAD_CELL';
     OP_MAKE_FUNCTION : Result := 'MAKE_FUNCTION';
     otherwise          Result := 'OpcodeToString: Unknown opcode: ' + IntToStr(Opcode);
